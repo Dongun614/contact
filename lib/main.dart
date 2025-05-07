@@ -7,13 +7,14 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:
+        home:
       //Image.asset('경로')
-      //Icon(Icons.이미지 이름)
-      //Text('안녕')
+      //Icon(Icons.아이콘 이름)
+      //Text('안녕') -> 위젯은 대문자로 시작하고 소괄호가 붙는다.
     );
   }
 }

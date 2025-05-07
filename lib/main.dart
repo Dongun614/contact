@@ -11,7 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home:
+        home: Center(
+          child: Container( width:50, height: 50, color: Colors.blue )
+        )
+
       //Image.asset('경로')
       //Icon(Icons.아이콘 이름)
       //Text('안녕') -> 위젯은 대문자로 시작하고 소괄호가 붙는다.

@@ -11,13 +11,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Center(
-          child: Container( width:50, height: 50, color: Colors.blue )
-        )
-
-      //Image.asset('경로')
-      //Icon(Icons.아이콘 이름)
-      //Text('안녕') -> 위젯은 대문자로 시작하고 소괄호가 붙는다.
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "앱임",
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.blue,
+          centerTitle: false,
+        ),
+        body: Container(
+          child: Text("안녕"),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child:
+            SizedBox(
+              height: 70,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
+                children:[
+                  Icon(Icons.phone),
+                  Icon(Icons.message),
+                  Icon(Icons.contact_page)
+                ]
+              ),
+            )
+        ),
+      )
     );
   }
 }

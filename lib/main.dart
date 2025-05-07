@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp()); // 기본적으로 이 Main 함수를 실행하며
-  // RunApp() 안에 있는 것들을 실행한다고 볼 수 있다.
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,22 +19,15 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
           centerTitle: false,
         ),
-        body: Container(
-          child: Text("안녕"),
-        ),
-        bottomNavigationBar: BottomAppBar(
-          child:
-            SizedBox(
-              height: 70,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
-                children:[
-                  Icon(Icons.phone),
-                  Icon(Icons.message),
-                  Icon(Icons.contact_page)
-                ]
-              ),
-            )
+        body: Align( //Align 위젯
+          alignment: Alignment.bottomCenter, //alignment 파라미터
+          child: Container(
+            width: double.infinity, height: 50, color: Colors.blue, //double.infinity 무한
+            //margin: EdgeInsets.fromLTRB(0, 30, 0, 0), //margin, padding
+            // decoration: BoxDecoration( //Decoration 파라미타
+            //   border: Border.all(color: Colors.black)
+            // ),
+          ),
         ),
       )
     );
